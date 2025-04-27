@@ -59,8 +59,8 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/Projects" class="nav-link" active-class="text-danger">
-              <h5 class="nav-link">Projects</h5>
+            <router-link to="/Products" class="nav-link" active-class="text-danger">
+              <h5 class="nav-link">Game</h5>
             </router-link>
           </li>
           <li>

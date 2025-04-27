@@ -1,103 +1,250 @@
-<template >
-  <section class="container-fluid text-light py-5 bg-dark">
+<template>
+
+  <Banner></Banner>
+  <section class="container-fluid  py-5 bg-x-light bg-opacity-75 shadow-lg">
     <div class="row align-items-center p-5">
-      <!-- Left side: Text -->
-      <div class="col-lg-8 text-center text-lg-start">
-        <h1 class="display-4 fw-bold mb-4">Hi i'm Trần Văn Thái <span class="text-primary"> A FrontEnd Developer</span>
+
+      <div class="col-lg-7  text-lg-start " style="text-align: justify;">
+        <h1 class="display-6 fw-bold mb-4">
+          Giới thiệu về sứ mệnh của
+          <span class="text-success">GProducts</span>
+          với thế giới
+
         </h1>
-        <p class="lead mb-4">
-          As an IT student, I chose the direction of website front-end development in my third year of university.
-          Coupled with my current passion, I have acquired the necessary skills for myself. Let's explore!
-        </p>
-        <router-link to="/Projects" class="btn btn-primary btn-lg">Wanna see my projects ?</router-link>
+        <small class="lead mb-4 d-flex align-items-center justify-content-center" style="text-align: justify;">
+          Với sứ mệnh của chúng tôi là cung cấp những sản phẩm xanh, thân thiện với môi trường,
+          giúp bảo vệ hành tinh và nâng cao chất lượng cuộc sống của con người.
+          Chúng tôi cam kết mang đến những sản phẩm chất lượng cao, an toàn cho sức khỏe và môi trường.
+          Chúng tôi cam kết cung cấp những sản phẩm chất lượng cao, an toàn cho sức khỏe và môi trường.
+          Hãy cùng chúng tôi cùng nhau xây dựng một tương lai bền vững hơn cho thế hệ mai sau.
+          GProducts cam kết sẽ là một sản phẩm xanh, thân thiện với môi trường, giúp bảo vệ hành tinh và nâng cao chất
+          lượng cuộc sống của con người.
+          chúng tôi hướng tới một sản phẩm xanh, thân thiện với môi trường, giúp bảo vệ hành tinh và nâng cao chất lượng
+          cuộc sống của con. chúng tôi hướng tới một sản phẩm xanh, thân thiện với môi trường, giúp bảo vệ hành tinh và
+          nâng cao chất lượng
+          cuộc sống của con, chúng tôi hướng tới một sản phẩm xanh, thân thiện với môi trường, giúp bảo vệ hành tinh và
+          nâng cao chất lượng
+        </small>
+        <a class="btn btn-success mt-0 mb-3" href="#spnb">Click để chung tay bảo vệ môi trường nào</a>
+
       </div>
 
-      <!-- Right side: Image -->
-      <div class="col-lg-4 text-center mt-4 mt-lg-0">
-        <img src="/src/assets/tui6.jpg" alt="Hero Image" class=" img-fluid  rounded " />
+
+      <div class="col-lg-5 mt-4 mt-lg-0">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+              class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+          </div>
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img :src="cuago" class="d-block w-100 fixed-img rounded" alt="Slide 1" />
+            </div>
+
+            <div class="carousel-item">
+              <img :src="bango" class="d-block w-100 fixed-img rounded" alt="Slide 2" />
+            </div>
+
+            <div class="carousel-item">
+              <img :src="thotgo" class="d-block w-100 fixed-img rounded" alt="Slide 3" />
+            </div>
+
+            <div class="carousel-item">
+              <img :src="hocgo" class="d-block w-100 fixed-img rounded" alt="Slide 4" />
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
       </div>
+
+
     </div>
   </section>
-  <!-- section giới thiệu sơ lược -->
-  <section class="container-fluid text-light py-5 bg-dark " >
-    <h3 class="text-center">Experiences</h3>
-    <div class="row d-flex justify-content-center align-items-center p-5">
-      <div class="col-lg-5 col-sm-12">
-        <h5>
-          <i class="fa-solid fa-arrow-down"></i>
-          Internship at the <span class="text-primary"> Dong Thap Provincial Digital Transformation Center </span>
-          (emphasizes the internship)
-        </h5>
-        <h5>Time: <span class="text-primary" style="text-decoration: underline white 1px;">Dong Thap Provincial Digital
-            Transformation Center </span> </h5>
-        <p>Tại đây, tôi đã được học về VueJS, Bootstrap, Responsive Web... cũng như tự
-          xây dựng cho mình một trang FrontEnd Web chủ đề về giới thiệu đất nước Việt Nam, các anh chị tại nơi đây
-          vô cùng thân thiệt dễ mến, tạo ra một môi trường làm việc để tôi phát triển nhanh, có điều tôi hơi báo mấy anh
-          chị
-          vì tôi bị thủy đậu tui lây gián tiếp cả phòng.
-        </p>
-      </div>
-      <div class="col-lg-3 ">
-        <img src="../assets/ttcds.jpg" alt="anhtt" class="img-fluid rounded">
-      </div>
-    </div>
 
-    <div class="row d-flex justify-content-center align-items-center p-5">
-      <div class="col-lg-5 col-sm-12">
-        <h5>
-          <i class="fa-solid fa-arrow-down"></i>
-          Internship at the <span class="text-primary"> Dong Thap Provincial Digital Transformation Center </span>
-          (emphasizes the internship)
-        </h5>
-        <h5>Time: <span class="text-primary" style="text-decoration: underline white 1px;">Dong Thap Provincial Digital
-            Transformation Center </span> </h5>
-        <p>Tại đây, tôi đã được học về VueJS, Bootstrap, Responsive Web... cũng như tự
-          xây dựng cho mình một trang FrontEnd Web chủ đề về giới thiệu đất nước Việt Nam, các anh chị tại nơi đây
-          vô cùng thân thiệt dễ mến, tạo ra một môi trường làm việc để tôi phát triển nhanh, có điều tôi hơi báo mấy anh
-          chị
-          vì tôi bị thủy đậu tui lây gián tiếp cả phòng.
-        </p>
+  <section class="my-5">
+    <div class="container text-center">
+      <h2 id="spnb" class="mb-4">SẢN PHẨM NỔI BẬT</h2>
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-3 col-md-6 d-none d-sm-block activeTab   ">
+          <h5>Tất cả</h5>
+        </div>
+        <div class="col-lg-3 col-md-6 d-none d-sm-block activeTab  ">
+          <h5>Đồ gia dụng</h5>
+        </div>
+        <div class="col-lg-3 col-md-6 d-none d-sm-block activeTab  ">
+          <h5>Nội thất</h5>
+        </div>
+        <div class="col-lg-3 col-md-6 d-none d-sm-block activeTab ">
+          <h5>Thời trang</h5>
+        </div>
       </div>
-      <div class="col-lg-3 col-sm-12">
-        <img src="../assets/vtravel.jpg" alt="anhtt" class="img-fluid rounded">
-      </div>
-    </div>
-
-    
-  </section>
-
-  <section class="container-fluid text-light pt-0 pb-5 bg-dark">
-
-    <h3 class="text-center">Project</h3>
-    <div class="container p-3">
+      <ul class="nav justify-content-center mb-4">
+        <li class="nav-item" v-for="(tab, index) in tabs" :key="index">
+          <a class="nav-link" :class="{ active: activeTab === tab }" @click="activeTab = tab">{{ tab }}</a>
+        </li>
+      </ul>
 
       <div class="row">
-        <div class="col-lg-6 col-sm-12">
-          <img src="/src/assets/vtravel.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-6 col-sm-12 align-items-center p-3 ">
-          <h4 class="text-center">VTRAVEL - INTRODUCE ABOUT OUT COUNRY (VIETNAM)</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quos omnis quam modi quas quod,
-            voluptatibus, nesciunt pariatur veniam quaerat hic autem! Nemo,
-            id consequatur. Iure ducimus numquam sunt vitae necessitatibus.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae minus nemo quaerat sed enim dolorem
-            asperiores fugit quidem illum, alias quasi blanditiis praesentium unde hic. Quis nam unde blanditiis
-            deleniti.
-          </p>
-          <a-button type="primary" size="small">Live Demo</a-button>
+        <div class="col-lg-3 col-md-3 col-sm-6 mb-4" v-for="(product, index) in products" :key="index">
+          <div class="card h-100 position-relative border-0 shadow-sm">
+            <div v-if="product.discount" class="discount-badge 
+            position-absolute top-0 start-0 bg-success text-white px-3 py-1 small rounded-end">
+              -{{ product.discount }}%
+            </div>
+            <img :src="product.image" class="card-img-top product-img" :alt="product.name" />
+            <div class="card-body p-2">
+              <h6 class="card-title mb-1">{{ product.name }}</h6>
+              <div class="text-muted small" v-if="product.oldPrice">
+                <del>{{ formatPrice(product.oldPrice) }}</del>
+              </div>
+              <div class="text-success fw-bold">{{ formatPrice(product.price) }}</div>
+            </div>
+
+          </div>
         </div>
       </div>
+
+      <!-- <button class="btn btn-outline-success mt-3">Xem thêm</button> -->
     </div>
   </section>
+
+ 
+
 </template>
+<script setup>
+import { ref } from 'vue'
+import Banner from '@/components/Banner.vue'
 
 
+import song from '@/assets/song.jpg'
+import nhamay from '@/assets/nhamay.jpg'
+import thanhpho from '@/assets/thanhpho.jpg'
+import tp2 from '@/assets/tp2.jpg'
+import onghutre from '@/assets/onghutre.jpg'
+import muongdiatre from '@/assets/muongdiatre.jpg'
+import hopbamia from '@/assets/hopbamia.jpg'
+import hocgo from '@/assets/hocgo.jpg'
+import amtratre from '@/assets/amtratre.jpg'
+import thotgo from '@/assets/thotgo.jpg'
+import cuago from '@/assets/cuago.jpg'
+import bango from '@/assets/bango.jpg'
+import duongmia from '@/assets/duongmia.jpg'
+
+
+
+
+
+// Tabs cho danh mục sản phẩm
+const tabs = ref(["Tất cả", "Đồ gia dụng", "Nội thất", "Thời trang"])
+const activeTab = ref("Tất cả")
+
+// Danh sách sản phẩm
+const products = ref([
+  {
+    name: 'Ống hút tre tự nhiên',
+    price: 50000,
+    oldPrice: 120000,
+    discount: 20,
+    image: onghutre,
+  },
+  {
+    name: 'Thìa tre thân thiện thiên nhiên',
+    price: 8000,
+    oldPrice: 250000,
+    discount: 10,
+    image: muongdiatre,
+  },
+  {
+    name: 'Hộp làm từ bả mía',
+    price: 5000,
+    image: hopbamia,
+  },
+  {
+    name: 'Hộc đựng muỗng đĩa',
+    price: 89000,
+    discount: 70,
+    image: hocgo,
+  },
+  {
+    name: 'Ấm trà tre tự nhiên',
+    price: 230000,
+    discount: 10,
+    image: amtratre,
+  },
+  {
+    name: 'Thớt gỗ đẹp màu nâu',
+    price: 150000,
+    discount: 10,
+    image: thotgo,
+  },
+  {
+    name: 'Cửa gỗ thẩm mỹ',
+    price: 150000,
+    discount: 10,
+    image: cuago,
+  },
+  {
+    name: 'Đường mía tự nhiên',
+    price: 40000,
+    discount: 10,
+    image: duongmia,
+  },
+])
+
+
+
+// Format giá tiền VNĐ
+const formatPrice = (value) => {
+  return value.toLocaleString('vi-VN') + '₫'
+}
+</script>
 
 <style scoped>
 h1 span {
-  color: #0d6efd;
+  color: #7AE2CF;
 }
 
+.fixed-img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  height: 500px;
+  border-radius: 0px;
+}
+
+.product-img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  height: 300px;
+  border-radius: 0px;
+}
+
+.activeTab {
+  padding: 5px;
+  border-radius: 20px;
+
+}
+
+.activeTab:hover {
+  background: rgb(6, 102, 16);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
 </style>

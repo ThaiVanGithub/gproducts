@@ -1,81 +1,74 @@
 <template>
-  <header class="bg-dark text-white py-3">
+  <header class=" text-dark fixed-top bg-white  py-3">
     <div class="container d-flex justify-content-between align-items-center">
       <!-- Logo -->
-<div class="col-lg-4 ">
-  <router-link to="/" class="fw-bold text-light nav-link" active-class="text-danger" exact>
-        <h3 class="fw-bold"> Portfolio</h3>
-      </router-link>
-</div>
-      
-      <div class="col-lg-4 d-flex align-items-center justify-content-center">
-        <h2 class=" d-none d-lg-flex"><i class="fa-brands fa-vuejs"></i>
-
-        </h2>
-
+      <div class="col-lg-4 col-sm-12 d-flex justify-content-start align-items-center">
+        <router-link to="/" class="d-flex nav-link align-items-center" active-class="text-danger" exact>
+          <img src="/src/assets/logo.jpg" class="img-fluid rounded me-2" alt="Logo GreenProducts"
+            style="max-height: 40px;">
+          <h3 class="fw-bold m-0 dark-green">GProducts</h3>
+        </router-link>
       </div>
 
-      <!-- Navigation -->
-      <nav class="col-lg-4 d-flex justify-content-end ">
-        <ul class="d-flex align-items-end gap-4 list-unstyled mb-0 d-none d-lg-flex">
+
+
+      <nav class="col-lg-4 d-flex justify-content-end fw-bold">
+        <ul class="d-flex align-items-end gap-4 list-unstyled mb-0 d-none d-lg-flex dark-green">
           <li>
-            <router-link to="/" class="text-white nav-link" active-class="text-danger" exact>
-              <p class="nav-link">Home</p>
+            <router-link to="/" class="nav-link " active-class="text-dark" exact>
+              <h5 class="nav-link ">Home</h5>
             </router-link>
           </li>
           <li>
-            <router-link to="/About" class="text-white " active-class="text-danger">
-              <p class="nav-link">About</p>
+            <router-link to="/Products" class="nav-link" active-class="text-danger">
+              <h5 class="nav-link ">Products</h5>
             </router-link>
           </li>
           <li>
-            <router-link to="/Projects" class="text-white nav-link" active-class="text-danger">
-              <p class="nav-link">
-                Projects
-              </p>
+            <router-link to="/Blank" class="nav-link" active-class="text-danger">
+              <h5 class="nav-link">
+              Empty page
+              </h5>
             </router-link>
           </li>
           <li>
-            <router-link to="/Contact" class="text-white nav-link" active-class="text-danger">
-              <p class="nav-link">Contact</p>
+            <router-link to="/Contact" class="nav-link" active-class="text-danger">
+              <h5 class="nav-link">Contact</h5>
             </router-link>
           </li>
         </ul>
       </nav>
 
-      <a-button class="col-lg-4 d-lg-none d-sm-flex" type="primary"
-       @click="showDrawer"><i class="fa-solid fa-bars"></i></a-button>
+      <a-button class="col-lg-4 d-lg-none d-sm-flex" style="color: green;"  @click="showDrawer"><i
+          class="fa-solid fa-bars fw-bold"></i></a-button>
 
       <!-- drawer antds -->
       <a-drawer v-model:open="open" class="custom-class" root-class-name="root-class-name"
-        :root-style="{ color: 'black' }" title="Menu" placement="right"
+        :root-style="{ color: 'green', zIndex: 1100 }" style="color: green" title="MENU" placement="right" 
         @after-open-change="afterOpenChange">
-        
-        <ul class="d-flex-columns fw-semibold gap-4 list-unstyled text-center">
+        <ul class="p-5list-unstyled d-flex flex-column gap-4">
+          
           <li>
-            <router-link to="/" active-class="text-danger" exact>
-              <p class="nav-link">Home</p>
+            <router-link to="/" class="nav-link" active-class="text-danger" exact>
+              <h5 class="nav-link">Home</h5>
             </router-link>
           </li>
           <li>
-            <router-link to="/About"  active-class="text-danger">
-              <p class="nav-link">About</p>
+            <router-link to="/Blank" class="nav-link" active-class="text-danger">
+              <h5 class="nav-link">Empty</h5>
             </router-link>
           </li>
           <li>
-            <router-link to="/Projects" active-class="text-danger">
-              <p class="nav-link">
-                Projects
-              </p>
+            <router-link to="/Projects" class="nav-link" active-class="text-danger">
+              <h5 class="nav-link">Projects</h5>
             </router-link>
           </li>
           <li>
-            <router-link to="/Contact" active-class="text-danger">
-              <p class="nav-link">Contact</p>
+            <router-link to="/Contact" class="nav-link" active-class="text-danger">
+              <h5 class="nav-link">Contact</h5>
             </router-link>
           </li>
         </ul>
-
       </a-drawer>
 
     </div>
@@ -99,6 +92,12 @@ const showDrawer = () => {
 }
 
 .nav-link:hover {
-  color: rgb(82, 82, 254);
+  color: rgb(6, 102, 16);
+}
+li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: black;
 }
 </style>

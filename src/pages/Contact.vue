@@ -1,10 +1,10 @@
 <template>
-   <section class="contact-section bg-dark text-dark py-5">
+   <section class="contact-section bg-dark text-dark py-5 mt-5">
      <div class="container ">
        <div class="text-center mb-5">
      
-         <h2 class="section-title text-primary">Contact with me</h2>
-         <p class="text-light">Contact me if you want !</p>
+         <h2 class="section-title text-success">Liên hệ với chúng tôi ngay</h2>
+  
        </div>
  
        <div class="row g-5">
@@ -148,7 +148,7 @@
  
  <script setup>
  import { ref } from 'vue';
-
+ import '@/styles/contact.css';
  
  const formData = ref({
    name: '',
@@ -170,106 +170,3 @@
  };
  </script>
  
- <style scoped>
- .contact-section {
-   min-height: 100vh;
-   display: flex;
-   align-items: center;
- }
- 
- .section-title {
-   font-weight: 700;
-   position: relative;
-   padding-bottom: 15px;
- }
- 
- .section-title::after {
-   content: '';
-   position: absolute;
-   bottom: 0;
-   left: 50%;
-   transform: translateX(-50%);
-   width: 60px;
-   height: 3px;
-   background: #1890ff;
- }
- 
- .contact-card,
- .info-card {
-   background: rgba(255, 255, 255, 0.05);
-   border-radius: 15px;
-   border: 1px solid rgba(255, 255, 255, 0.1);
-   transition: transform 0.3s ease;
- }
- 
- .contact-card:hover,
- .info-card:hover {
-   transform: translateY(-5px);
- }
- 
- .custom-input {
-   background: rgba(255, 255, 255, 0.03);
-   border: 1px solid rgba(255, 255, 255, 0.1);
-   color: white !important;
- }
- 
- .send-btn {
-   background: #1890ff;
-   border: none;
-   height: 45px;
-   font-weight: 500;
-   transition: all 0.3s ease;
- }
- 
- .send-btn:hover {
-   background: #40a9ff !important;
-   transform: translateY(-2px);
- }
- 
- .contact-info-item {
-   display: flex;
-   align-items: center;
-   padding: 15px;
-   background: rgba(255, 255, 255, 0.03);
-   border-radius: 10px;
- }
- 
- .icon-wrapper {
-   width: 40px;
-   height: 40px;
-   border-radius: 8px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
- 
- .social-icon {
-   width: 40px;
-   height: 40px;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 18px;
-   transition: all 0.3s ease;
- }
- 
- .social-icon.github {
-   background: #333;
-   color: white;
- }
- 
- .social-icon.linkedin {
-   background: #0a66c2;
-   color: white;
- }
- 
- .social-icon.facebook {
-   background: #1877f2;
-   color: white;
- }
- 
- .social-icon:hover {
-   transform: translateY(-3px);
- }
- </style>

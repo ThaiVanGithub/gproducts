@@ -1,0 +1,70 @@
+.blur-20{
+    opacity: 20%;
+  }
+  .blur-50{
+    opacity: 50%;
+  }
+  .blur-70{
+    opacity: 70%;
+  }
+  .max-w {
+    width: 100%;
+  }
+  
+  h1 span {
+    color: #7AE2CF;
+  }
+  
+  .fixed-img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    height: 500px;
+    border-radius: 0px;
+  }
+  
+  .product-img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    height: 300px;
+    border-radius: 0px;
+  }
+  .special-product-img {
+  
+    object-fit: cover;
+    object-position: center;
+    height: 250px;
+    border-radius: 0px;
+  }
+  .hover-effect {
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .hover-effect:hover {
+    transform: translateY(-5px);
+  }
+  
+  .hover-zoom {
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .hover-zoom:hover {
+    transform: scale(1.05);
+  }
+  
+  .bg-gradient-success {
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+  }
+  
+  .special-product::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+  }

@@ -5,9 +5,8 @@
   
           <!-- Giới thiệu -->
           <div class="col-12 col-md-4">
-            <div class="d-flex">
-            
-            <h5 class="fw-bold mb-3">GPRODUCTS</h5>
+            <div class="d-flex ">
+            <h5 class="fw-bold mb-3 ">GPRODUCTS</h5>
           </div>
             <p class="text-light small">
               Thank you for visiting. I hope recruiters <br> are satisfied with the values that I bring.

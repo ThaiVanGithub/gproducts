@@ -1,5 +1,5 @@
 <template>
-  <header class=" text-dark fixed-top bg-white  py-3">
+  <header class=" text-dark fixed-top bg-white  py-3 shadow-lg">
     <div class="container d-flex justify-content-between align-items-center">
       <!-- Logo -->
       <div class="col-lg-4 col-sm-12 d-flex justify-content-start align-items-center">
@@ -15,7 +15,7 @@
       <nav class="col-lg-4 d-flex justify-content-end fw-bold">
         <ul class="d-flex align-items-end gap-4 list-unstyled mb-0 d-none d-lg-flex dark-green">
           <li>
-            <router-link to="/" class="nav-link " active-class="text-dark" exact>
+            <router-link to="/" class="nav-link " active-class="text-danger" exact>
               <h5 class="nav-link ">Home</h5>
             </router-link>
           </li>
@@ -25,9 +25,9 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/Blank" class="nav-link" active-class="text-danger">
+            <router-link to="/Cart" class="nav-link" active-class="text-danger">
               <h5 class="nav-link">
-              Empty page
+               Cart
               </h5>
             </router-link>
           </li>
@@ -36,18 +36,34 @@
               <h5 class="nav-link">Contact</h5>
             </router-link>
           </li>
+        
+          <li class="d-flex justify-content-center align-items-center gap-2">
+            <a-space direction="vertical">
+              <a-switch class="mb-2" v-model:checked="state.checked3">
+                <template #checkedChildren><i class="fa-solid fa-moon"></i></template>
+                <template #unCheckedChildren><i class="fa-solid fa-sun"></i></template>
+              </a-switch>
+            </a-space>
+          </li>
         </ul>
       </nav>
 
-      <a-button class="col-lg-4 d-lg-none d-sm-flex" style="color: green;"  @click="showDrawer"><i
+      <a-button class="col-lg-4 d-lg-none d-sm-flex" style="color: green;" @click="showDrawer"><i
           class="fa-solid fa-bars fw-bold"></i></a-button>
 
       <!-- drawer antds -->
       <a-drawer v-model:open="open" class="custom-class" root-class-name="root-class-name"
-        :root-style="{ color: 'green', zIndex: 1100 }" style="color: green" title="MENU" placement="right" 
+        :root-style="{ color: 'green', zIndex: 1100 }" style="color: green" title="MENU" placement="right"
         @after-open-change="afterOpenChange">
         <ul class="p-5list-unstyled d-flex flex-column gap-4">
-          
+          <li class="d-flex justify-content-start align-items-start gap-2">
+            <a-space direction="vertical">
+              <a-switch class="mb-1" v-model:checked="state.checked3">
+                <template #checkedChildren><i class="fa-solid fa-moon"></i></template>
+                <template #unCheckedChildren><i class="fa-solid fa-sun"></i></template>
+              </a-switch>
+            </a-space>
+          </li>
           <li>
             <router-link to="/" class="nav-link" active-class="text-danger" exact>
               <h5 class="nav-link">Home</h5>
@@ -60,7 +76,7 @@
           </li>
           <li>
             <router-link to="/Products" class="nav-link" active-class="text-danger">
-              <h5 class="nav-link">Game</h5>
+              <h5 class="nav-link">Products</h5>
             </router-link>
           </li>
           <li>
@@ -68,6 +84,7 @@
               <h5 class="nav-link">Contact</h5>
             </router-link>
           </li>
+         
         </ul>
       </a-drawer>
 
@@ -84,6 +101,13 @@ const afterOpenChange = bool => {
 const showDrawer = () => {
   open.value = true;
 };
+import { reactive } from 'vue';
+const state = reactive({
+  checked1: true,
+  checked2: false,
+});
+
+
 </script>
 
 <style scoped>
@@ -94,7 +118,8 @@ const showDrawer = () => {
 .nav-link:hover {
   color: rgb(6, 102, 16);
 }
-li{
+
+li {
   list-style: none;
   padding: 0;
   margin: 0;
